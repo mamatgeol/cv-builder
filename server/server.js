@@ -14,8 +14,12 @@ app.use("/api/cv", require("./routes/cv"));
 
 // Test endpoint
 app.get("/", (req, res) => {
-  res.send("CV Builder API is running");
+  res.json({
+    status: "OK",
+    message: "CV Builder API is running"
+  });
 });
+
 
 // MongoDB
 mongoose
@@ -25,6 +29,8 @@ mongoose
 
 // Port (WAJIB untuk cloud)
 const PORT = process.env.PORT || 8080;
+
 app.listen(PORT, () => {
-  console.log(`API running on port ${PORT}`);
+  console.log("API ready on port " + PORT);
 });
+
