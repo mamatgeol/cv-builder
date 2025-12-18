@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-app: #121212;        /* Hitam legam untuk background utama */
+  --bg-panel: #1e1e1e;      /* Abu gelap untuk panel form */
+  --bg-input: #2a2a2a;      /* Abu sedikit terang untuk input */
+  --border-color: #333333;  /* Garis halus */
+  --accent-color: #3b82f6;  /* Biru modern */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Font modern & bersih */
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar cantik (Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

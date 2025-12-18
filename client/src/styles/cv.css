@@ -1,0 +1,99 @@
+/* src/styles/cv.css */
+
+/* Container Pembungkus Kertas */
+.a4-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px; /* Ruang scroll bawah */
+}
+
+/* Kertas A4 Utama */
+.a4 {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  box-sizing: border-box;
+  
+  /* Efek Bayangan & Skala agar terlihat "Pop Up" */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transform-origin: top center;
+
+  /* === PERBAIKAN PENTING === */
+  /* 1. Paksa Font jadi Arial (Formal) */
+  font-family: Arial, Helvetica, sans-serif !important;
+  
+  /* 2. Paksa Warna Teks jadi Hitam (Mengalahkan tema dark mode) */
+  color: #000000 !important;
+}
+
+/* Pastikan semua elemen anak di dalam kertas ikut berwarna hitam & font Arial */
+.a4 h1, 
+.a4 h2, 
+.a4 h3, 
+.a4 h4, 
+.a4 p, 
+.a4 li, 
+.a4 span, 
+.a4 div,
+.a4 strong {
+  color: #000000 !important;
+  font-family: inherit; /* Mengikuti parent (Arial) */
+}
+
+/* Header Nama */
+.cv-header h1 {
+  font-size: 24pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+}
+
+.cv-header p {
+  font-size: 10pt;
+  margin: 5px 0;
+}
+
+/* Garis Pembatas (HR) */
+.a4 hr {
+  border: 0;
+  border-top: 2px solid #000000 !important; /* Garis Hitam Tebal */
+  margin: 15px 0;
+  opacity: 1;
+}
+
+/* Judul Per Bagian (PENGALAMAN, PENDIDIKAN, dll) */
+section h3 {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000; /* Garis bawah judul */
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Isi Konten Paragraf & List */
+section p, section li, section div {
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 18px;
+  margin-top: 5px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+/* Info Tambahan (Tanggal/Lokasi) agar miring */
+.date-location {
+  font-style: italic;
+  font-size: 10pt;
+  margin-bottom: 5px;
+}
